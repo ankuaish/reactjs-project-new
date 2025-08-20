@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { Clock } from "./Clock";
+import { Derived } from "./Derived";
 
 function App() {
   const [color, setColor] = useState("yellow");
@@ -19,6 +20,7 @@ function App() {
         <option value="yellow">Yellow</option>
       </select>
       <Clock color={color} />
+      <Derived />
     </>
   );
 }
