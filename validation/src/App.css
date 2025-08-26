@@ -1,0 +1,13 @@
+#root {
+ 
+  margin: 0 auto;
+  padding: 2rem;
+
+}
+
+.error{
+  border: 2px solid red
+}
+error :focus{
+  outline: 2px solid red;
+}
