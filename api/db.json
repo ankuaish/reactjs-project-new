@@ -1,0 +1,73 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "user": [
+    {
+      "id": "1",
+      "name": "aish",
+      "age": "10",
+      "email": "ab@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "aishu",
+      "age": "20",
+      "email": "abc@gmail.com"
+    },
+    {
+      "name": "aishwarya",
+      "email": "abcde@gmail.com",
+      "age": "400",
+      "id": "4"
+    },
+    {
+      "name": "peter",
+      "email": "abcdef@gmail.com",
+      "age": "500",
+      "id": "5"
+    },
+    {
+      "id": "6",
+      "name": "aishaa",
+      "age": "60",
+      "email": "abcdefg@gmail.com"
+    },
+    {
+      "id": "5031",
+      "name": "test",
+      "age": "20",
+      "email": "test@gmail.com"
+    },
+    {
+      "name": "aisggggg",
+      "email": "abcfg@gmail.com",
+      "age": "25",
+      "id": "4b62"
+    }
+  ]
+}

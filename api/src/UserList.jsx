@@ -1,20 +1,44 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom"
+
 
 const UserList = () => {
   const [users, setUser] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     setLoading(true);
     getUserData();
   }, []);
+
+const url = "http://localhost:3000/user";
   const getUserData = async () => {
-    const url = "http://localhost:3000/users";
+    
     let response = await fetch(url);
     response = await response.json();
     setUser(response);
     setLoading(false);
   };
+ 
+const deleteUser = async(id)=>{
+ let response = await fetch(url+"/"+id, {
+  method:"delete",
+ });
+    const data  = await response.json();
+    if(data){
+      alert("record deleted");
+ getUserData();
+    }
+   
+}
+
+const editUser=(id)=>{
+navigate("/edit/"+ id)
+}
+
   return (
     <div>
       <h2>Fetch/Get Data from Json Server API and loader</h2>
@@ -22,6 +46,7 @@ const UserList = () => {
         <li> Name</li>
         <li>Age</li>
         <li>Email </li>
+        <li>Action</li>
       </ul>
       {!loading ? (
         users &&
@@ -30,6 +55,8 @@ const UserList = () => {
             <li>{item.name}</li>
             <li>{item.age}</li>
             <li>{item.email}</li>
+            <li>   <button onClick={() => deleteUser(item.id)}>Delete</button>
+             <button onClick={() => editUser(item.id)}>Edit</button></li>
           </ul>
         ))
       ) : (

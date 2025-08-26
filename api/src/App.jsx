@@ -1,6 +1,7 @@
 import "./App.css";
 import UserAdd from "./UserAdd";
 import UserList from "./UserList";
+import UserEdit from "./UserEdit";
 import { Routes, Route, NavLink } from "react-router";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<UserList />} />
           <Route path="/add" element={<UserAdd />} />
+            <Route path="/edit/:id" element={<UserEdit />} />
         </Routes>
       </div>
     </>
