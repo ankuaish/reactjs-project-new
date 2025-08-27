@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 
 import './App.css'
+import UseAct from './UseAct';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
 
   const handleName =(event) =>{
 if(event.target.value.length>5){
-setNameErr("Please enter valid user name only 8 characters allowed")
+setNameErr("Please enter valid user name only 5 characters allowed")
 }else{
   setNameErr("")
 }
@@ -41,6 +42,8 @@ if(regex.test(event.target.value)){
        <button disabled={nameErr || passErr}>Login</button>
     </div>
       
+
+      <UseAct/>
     </>
   )
 }
