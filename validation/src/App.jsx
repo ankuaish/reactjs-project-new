@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import "./App.css";
 import UseAct from "./UseAct";
+import UseRed from "./UseRed";
 
 function App() {
   const [nameErr, setNameErr] = useState();
@@ -49,6 +50,7 @@ function App() {
       </div>
 
       <UseAct />
+      <UseRed />
     </>
   );
 }
